@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
 var cors = require('cors')
-app.use(cors())
+app.use(cors({
+    origin: 'https://anish-portfilio.vercel.app'
+}));
 
 let bodyParser = require('body-parser')
 app.use(bodyParser.json());
